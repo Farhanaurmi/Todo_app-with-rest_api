@@ -1,0 +1,13 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<h1>Completed</h1>
+<ul>
+    {% for i in todos %}
+    <li>{% if i.im %}<b>{% endif %}{{ i.title }}{% if i.im %}</b>{% endif %}
+        {% if i.memo %}-{{ i.memo }}{% endif %}
+        {{ i.dtime|date:'M j Y H:i' }}
+    </li>
+    {% endfor %}
+
+</ul>
+{% endblock %}
