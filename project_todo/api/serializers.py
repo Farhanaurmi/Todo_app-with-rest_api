@@ -7,5 +7,11 @@ class TodoClassSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=TodoClass
-        fields=['id','title','memo','Ctime','dtime','im','user']
+        fields=['id','title','memo','Ctime','dtime','im']
 
+class CompleteSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model=TodoClass
+        fields=['id']
+        read_only_fields=['title','memo','dtime','im']
