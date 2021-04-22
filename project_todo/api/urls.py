@@ -8,4 +8,7 @@ urlpatterns = [
     path('todos/<int:pk>', views.viewtodosapi.as_view()),
     path('todos/<int:pk>/complete', views.completeapi.as_view()),
 
+    path('signup',views.signup),
+    path('login',views.login),
+
 ]
